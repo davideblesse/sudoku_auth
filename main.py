@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from models import UserIn, UserOut
-from auth import register_user, authenticate_user
+from auth_service import register_user, authenticate_user  # Updated import
 
 app = FastAPI(title="Sudoku Authentication API")
 

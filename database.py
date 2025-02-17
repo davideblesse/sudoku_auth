@@ -1,14 +1,17 @@
 import os
 from motor.motor_asyncio import AsyncIOMotorClient
+from dotenv import load_dotenv
 
-# Environment variable set in Render dashboard.
+# Load .env ONLY if running locally (Render provides environment variables automatically)
+if not os.getenv("RENDER"):
+    load_dotenv()
+
 MONGO_URI = os.getenv("MONGO_URI")
+
 if not MONGO_URI:
-    raise ValueError("MONGO_URI is not set in the environment variables.")
+    raise ValueError("❌ MONGO_URI is not set. Ensure environment variables are configured.")
 
-# Connect to MongoDB Atlas using the provided URI.
+# Connect to MongoDB Atlas
 client = AsyncIOMotorClient(MONGO_URI)
-
-# Explicitly set your database name.
 db = client["SudokuAuth"]
 users_collection = db["users"]
