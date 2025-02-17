@@ -1,0 +1,9 @@
+fastapi==0.109.0
+uvicorn==0.27.0
+motor==3.3.2
+python-dotenv==1.0.1
+passlib[bcrypt]==1.7.4  # Ensures bcrypt is used correctly with passlib
+bcrypt==4.1.2  # Use the latest compatible version
+PyJWT==2.8.0
+pydantic==2.5.3
+email-validator==1.1.3
