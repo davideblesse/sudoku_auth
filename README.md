@@ -53,6 +53,7 @@ auth/
 ├── main.py             # FastAPI application entry point
 ├── models.py           # Pydantic models for request and response validation
 └── requirements.txt    # Python dependencies for the auth service
+```
 
 ### Prerequisites
 
